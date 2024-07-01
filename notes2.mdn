@@ -1,0 +1,100 @@
+const game = (function(){
+
+    gameBoard = []
+    scoreX = 0;
+    scoreO = 0;
+    function createBoard(){
+        let row = 3
+        let column = 3
+
+        for(i = 0; i < row; i++){
+            gameBoard[i] = []
+        for(j = 0; j < column; j++){
+            gameBoard[i][j] = j;
+        }
+    }
+    console.log(gameBoard);
+    }
+    createBoard();
+
+function placeMarker(){
+
+    const join1 = gameBoard[0] 
+    // first row detection
+    const join2 = gameBoard[1]
+    // second row detection
+    const join3 = gameBoard[2]
+    // third row detection
+    const join4 = [gameBoard[0][0], gameBoard[1][0], gameBoard[2][0]]
+    // first column dtetction
+    const join5 = [gameBoard[0][1], gameBoard[1][1], gameBoard[2][1]]
+    // second column detection
+    const join6 = [gameBoard[0][2], gameBoard[1][2], gameBoard[2][2]]
+    // third colum detection
+    const join7 = [gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]]
+    // first diagonal detection
+    const join8 = [gameBoard[0][2], gameBoard[1][1], gameBoard[2][0]]
+    // Second diagonal detection
+
+
+   
+
+    let result = function(map){map.forEach((spot) => {
+        
+        if(spot == 'X'){
+            scoreX++
+            console.log("You Win")
+        }
+        else {
+            scoreX - 1
+            console.log("game is in progreess")
+        }
+
+        if(spot == 'O'){
+            scoreO++
+            console.log("You Win")
+        }
+        else {
+            scoreO - 1
+            console.log("game is in progreess")
+        }
+    });
+}
+let joinf = new result(join1)
+let joinor = new result(join4)
+    console.log(joinf)
+    console.log(joinor)
+}
+
+function determineWinner(){
+    if(scoreX == 3){
+        console.log("playerOne Wins")
+        console.log(scoreX)
+        console.log(scoreO)
+    }
+    else if(scoreO == 3){
+        console.log('O wins')
+        console.log(scoreX)
+        console.log(scoreO)
+    }
+    else{
+        console.log("game is still in progress")
+        console.log(scoreX)
+        console.log(scoreO)
+    }
+}
+
+
+return {
+    playRound: function(){
+        gameBoard[0][0] = 'X';
+        gameBoard[0][1] = 'X';
+        gameBoard[0][2] = 'X'
+        placeMarker();
+        determineWinner();
+
+    }
+}
+})();
+game.playRound();
+

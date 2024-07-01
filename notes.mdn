@@ -1,0 +1,20 @@
+1. else if it does not equal xxx or ooo
+
+function changeX(){
+ let cellElements = document.querySelectorAll('[data-cell]')
+
+ cellElements.forEach(cell => {
+    cell.addEventListener('click', () => {
+        cell.style.backgroundColor = 'red'
+    })
+ })
+
+
+}
+// REMEMBER THIS CODE
+
+1. make gameboard detection 1 and 0
+
+2. fix change x and change o because its slwoing down the code browser 
+
+we are going to clear the divs in a seperate function after we get faded and shower 

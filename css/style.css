@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#gameBoard {
+
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(3, 150px);
+    border: 1px solid black;
+}
+
+.board{
+    border: solid black 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gameUi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    row-gap: 10px;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+
+
+}
+
