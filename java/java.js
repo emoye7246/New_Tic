@@ -1,5 +1,4 @@
 const game = (function(){
-
     gameBoard = []
     markerX = "images/tic1.png"
     markerO = "images/tic2.png"
@@ -142,19 +141,18 @@ else{
 if(score == 1){
     console.log('you win')
     score = 0
+    dialog.style.display = 'flex'
     dialog.showModal()
 }
 else if(score == 2){
     console.log('you win player')
     score = 0
+    dialog.style.display = 'flex'
     dialog.showModal()
-    
-    
-
-
 }
 else{
     console.log(score)
+    dialog.close();
 }
 // second diagonal detctecion
 // this works
