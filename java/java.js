@@ -149,6 +149,7 @@ else if(score == 2){
     score = 0
     dialog.showModal()
     
+    
 
 
 }
@@ -356,5 +357,3 @@ return {
 
 })();
 game.playRound();
-
-// , {once : true}); is  insaen adn i love it because like it lets you only call the
