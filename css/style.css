@@ -19,7 +19,7 @@ body{
     background-position: center;
 }
 
-.gameUi {
+#gameUi {
     display: flex;
     flex-direction: column;
     justify-content: center;

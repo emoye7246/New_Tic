@@ -16,7 +16,6 @@ const game = (function(){
             gameBoard[i][j] = 3;
         }
     }
-    console.log(gameBoard)
     }
     createBoard();
 
@@ -144,12 +143,12 @@ if(score == 1){
     console.log('you win')
     score = 0
     dialog.showModal()
-    
 }
 else if(score == 2){
     console.log('you win player')
     score = 0
     dialog.showModal()
+    
 
 
 }
@@ -174,7 +173,7 @@ function startGame(){
     start.addEventListener('click', () => {
         clearBoard()
         createBoard()
-        dialog.close();
+        dialog.close()
         boardControl();
     })
     
@@ -194,16 +193,16 @@ function boardControl(){
 
     board1.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[0][0] = 1
             board1.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[0][0] = 1
         } 
         else if(activePlayer == false){
+            gameBoard[0][0] = 0
             board1.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[0][0] = 0
         }
         else{
             console.log("has not been clicked")
@@ -212,16 +211,16 @@ function boardControl(){
 
     board2.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[0][1] = 1
             board2.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[0][1] = 1
         }
         else if(activePlayer == false){
+            gameBoard[0][1] = 0
             board2.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[0][1] = 0
         }
         else{
             console.log("has not been clicked")
@@ -229,16 +228,16 @@ function boardControl(){
     }, {once : true});
     board3.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[0][2] = 1
             board3.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[0][2] = 1
         }
         else if(activePlayer == false){
+            gameBoard[0][2] = 0
             board3.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[0][2] = 0
         }
         else{
             console.log("has not been clicked")
@@ -246,16 +245,16 @@ function boardControl(){
     }, {once : true});
     board4.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[1][0] = 1
             board4.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[1][0] = 1
         }
         else if(activePlayer == false){
+            gameBoard[1][0] = 0
             board4.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[1][0] = 0
         }
         else{
             console.log("has not been clicked")
@@ -263,16 +262,16 @@ function boardControl(){
     }, {once : true});
     board5.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[1][1] = 1
             board5.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[1][1] = 1
         }
         else if(activePlayer == false){
+            gameBoard[1][1] = 0
             board5.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[1][1] = 0
         }
         else{
             console.log("has not been clicked")
@@ -280,16 +279,16 @@ function boardControl(){
     }, {once : true});
     board6.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[1][2] = 1
             board6.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[1][2] = 1
         }
         else if(activePlayer == false){
+            gameBoard[1][2] = 0
             board6.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[1][2] = 0
         }
         else{
             console.log("has not been clicked")
@@ -297,16 +296,16 @@ function boardControl(){
     }, {once : true});
     board7.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[2][0] = 1
             board7.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[2][0] = 1
         }
         else if(activePlayer == false){
+            gameBoard[2][0] = 0
             board7.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[2][0] = 0
         }
         else{
             console.log("has not been clicked")
@@ -314,16 +313,16 @@ function boardControl(){
     }, {once : true});
     board8.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[2][1] = 1
             board8.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[2][1] = 1
         }
         else if(activePlayer == false){
+            gameBoard[2][1] = 0
             board8.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[2][1] = 0
         }
         else{
             console.log("has not been clicked")
@@ -331,16 +330,16 @@ function boardControl(){
     }, {once : true});
     board9.addEventListener('click', () => {
         if(activePlayer == true){
+            gameBoard[2][2] = 1
             board9.style.backgroundImage = `url(${markerX})`
             activePlayer = false
             determineWinner();
-            gameBoard[2][2] = 1
         }
         else if(activePlayer == false){
+            gameBoard[2][2] = 0
             board9.style.backgroundImage = `url(${markerO})`
             activePlayer = true
             determineWinner();
-            gameBoard[2][2] = 0
         }
         else{
             console.log("has not been clicked")
@@ -354,9 +353,7 @@ return {
     }
 }
 
-function display(){
-    dialog.style.display = 'none'
-}
+
 })();
 game.playRound();
 
