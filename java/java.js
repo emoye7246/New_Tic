@@ -356,11 +356,17 @@ function boardControl(){
 boardControl();
 function winnerUi(){
     let xMessage = document.getElementById('xMessage')
+    let GameOver = document.getElementById('GameOver')
+    let start = document.getElementById('Start')
 
     if(score == 1){
+        start.textContent = 'Play Again'
+        GameOver.textContent = 'Game Over'
         xMessage.textContent = 'Player One Wins'
     }
     else if(score == 2){
+        start.textContent = 'Play Again'
+        GameOver.textContent = 'Game Over'
         xMessage.textContent = 'Player Two Wins'
     };
 }
