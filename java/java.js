@@ -3,6 +3,8 @@ const game = (function(){
     markerX = "images/tic1.png"
     markerO = "images/tic2.png"
    let dialog = document.querySelector('dialog')
+   let score = 0;
+
 
 
     function createBoard(){
@@ -42,7 +44,6 @@ function determineWinner(){
    let thirdColum = [gameBoard[0][2], gameBoard[1][2], gameBoard[2][2]]
    let firstDiagonal = [gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]]
    let secondDiagonal = [gameBoard[0][2], gameBoard[1][1], gameBoard[2][0]]
-   let score = 0;
 
    if(firstRow.toString() == win[0].toString()){
     score = 1
@@ -138,14 +139,17 @@ else{
     console.clear()
 
 }
+// How we fimd the winner
 if(score == 1){
     console.log('you win')
+    winnerUi()
     score = 0
     dialog.style.display = 'flex'
     dialog.showModal()
 }
 else if(score == 2){
     console.log('you win player')
+    winnerUi()
     score = 0
     dialog.style.display = 'flex'
     dialog.showModal()
@@ -153,6 +157,7 @@ else if(score == 2){
 else{
     console.log(score)
     dialog.close();
+    dialog.style.display = 'none'
 }
 // second diagonal detctecion
 // this works
@@ -165,7 +170,9 @@ function clearBoard(){
     })
 }
 clearBoard()
+
 function startGame(){
+    dialog.showModal()
     boardControl();
 
     let start = document.getElementById('Start')
@@ -173,6 +180,7 @@ function startGame(){
         clearBoard()
         createBoard()
         dialog.close()
+        dialog.style.display = 'none'
         boardControl();
     })
     
@@ -346,6 +354,20 @@ function boardControl(){
     }, {once : true});
 }
 boardControl();
+function winnerUi(){
+    let xMessage = document.getElementById('xMessage')
+
+    if(score == 1){
+        xMessage.textContent = 'Player One Wins'
+    }
+    else if(score == 2){
+        xMessage.textContent = 'Player Two Wins'
+    };
+}
+winnerUi()
+
+// Ui editing 
+
 return {
     playRound: function(){
         startGame()
