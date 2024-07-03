@@ -358,21 +358,30 @@ function winnerUi(){
     let xMessage = document.getElementById('xMessage')
     let GameOver = document.getElementById('GameOver')
     let start = document.getElementById('Start')
+    let form = document.getElementById('form');
+    let playerOne = document.getElementById('playerOne').value
+    let playerTwo = document.getElementById('playerTwo').value
 
     if(score == 1){
         start.textContent = 'Play Again'
         GameOver.textContent = 'Game Over'
-        xMessage.textContent = 'Player One Wins'
+        xMessage.textContent = `${playerOne} Wins`
+
+
     }
     else if(score == 2){
         start.textContent = 'Play Again'
         GameOver.textContent = 'Game Over'
-        xMessage.textContent = 'Player Two Wins'
+        xMessage.textContent = `${playerTwo} Wins`
+
+
+
     };
 }
 winnerUi()
 
 // Ui editing 
+
 
 return {
     playRound: function(){

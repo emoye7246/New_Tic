@@ -12,12 +12,18 @@ body{
     grid-template-rows: repeat(3, 150px);
     grid-template-columns: repeat(3, 150px);
     border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    
 }
 
 .board{
     border: solid black 1px;
     background-repeat: no-repeat;
     background-position: center;
+    
+
 }
 
 #gameUi {
@@ -31,6 +37,27 @@ body{
     border: 1px solid black;
     height: 200px;
     width: 200px;
+    border-radius: 20px;
     
+}
+
+#love{
+    margin-top: 50px;
+}
+
+#Start{
+    margin: auto;
+    margin-left: 0px;
+    padding: auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
 }
 
