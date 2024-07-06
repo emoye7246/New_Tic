@@ -354,6 +354,16 @@ function boardControl(){
     }, {once : true});
 }
 boardControl();
+
+function resetGame(){
+    let reset = document.getElementById('reset')
+    reset.addEventListener('click', () => {
+        clearBoard()
+        createBoard()
+        boardControl();
+    })
+}
+resetGame()
 function winnerUi(){
     let xMessage = document.getElementById('xMessage')
     let GameOver = document.getElementById('GameOver')
