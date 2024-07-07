@@ -40,7 +40,9 @@ body{
     border-radius: 20px;
     
 }
-
+#GameOver{
+    margin-bottom: 10px;
+}
 #love{
     display: flex;
     margin-top: 50px;
@@ -54,7 +56,6 @@ body{
     margin: auto;
     margin-left: 0px;
     padding: auto;
-   
     justify-content: center;
     align-items: center;
 }
